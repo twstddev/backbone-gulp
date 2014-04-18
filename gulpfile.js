@@ -3,7 +3,7 @@ var gulp = require( "gulp" );
 GLOBAL.plugins = require( "gulp-load-plugins" )();
 
 GLOBAL.config = {
-	hotname : "localhost",
+	hostname : "localhost",
 	port : 3000,
 	base : "app",
 	dist : "dist"
@@ -14,5 +14,6 @@ require( "gulp-load" )( gulp );
 gulp.loadTasks( __dirname );
 
 gulp.task( "development", [
-	"livereload"
+	"livereload",
+	"open"
 ] );
