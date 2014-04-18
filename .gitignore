@@ -1,0 +1,7 @@
+node_modules/
+**/vendorlibs
+**/*.log
+dist/
+.sass-cache/
+*.swp
+.DS_Store
