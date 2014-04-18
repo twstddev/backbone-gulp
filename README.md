@@ -1,6 +1,6 @@
 # Single page application boilerplate
 
-This is boilerplate is used for single page applications that work with JSON API on back end.
+This boilerplate is used for single page applications that work with JSON API on back end.
 
 This boilerplate contains
 
