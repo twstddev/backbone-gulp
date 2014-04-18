@@ -1,4 +1,5 @@
 var gulp = require( "gulp" );
+var path_helper = require( "path" );
 
 GLOBAL.plugins = require( "gulp-load-plugins" )();
 
@@ -9,11 +10,20 @@ GLOBAL.config = {
 	dist : "dist"
 };
 
+GLOBAL.get_application_path = function( path ) {
+	return path_helper.join( GLOBAL.config.base, path );
+}
+
+GLOBAL.output_error = function( error ) {
+	console.log( error.message );
+}
+
 // load tasks form the tasks directory
 require( "gulp-load" )( gulp );
 gulp.loadTasks( __dirname );
 
 gulp.task( "development", [
+	"compass",
 	"livereload",
 	"open"
 ] );

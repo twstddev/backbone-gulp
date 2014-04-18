@@ -5,3 +5,4 @@ dist/
 .sass-cache/
 *.swp
 .DS_Store
+app/css/
