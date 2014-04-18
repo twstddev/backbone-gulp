@@ -1,0 +1,11 @@
+{
+  "name": "your-application-name",
+  "version": "0.1.0",
+  "description": "\"Whatever describes your application goes here\"",
+  "repository": {
+    "type": "git",
+    "url": "your application git"
+  },
+  "author": "Your name goes here",
+  "license": "WTFPL"
+}
