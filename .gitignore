@@ -1,8 +1,9 @@
 node_modules/
-**/vendorlibs
+vendorlibs/
 **/*.log
 dist/
 .sass-cache/
 *.swp
 .DS_Store
 app/css/
+app/libs/

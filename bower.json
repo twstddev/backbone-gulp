@@ -14,5 +14,16 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "jquery": "1.*",
+    "jquery-migrate": "*",
+    "modernizr": "*",
+    "selectivizr": "*",
+    "requirejs": "*",
+    "lodash": "*",
+    "backbone": "*",
+    "marionette": "*",
+    "handlebars": "*"
+  }
 }
