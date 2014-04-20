@@ -4,6 +4,6 @@
  * If any additional functionality has to be added to the core,
  * extend it here.
  */
-define( function() {
+define( [ "marionette" ], function() {
 	return new Backbone.Marionette.Application();
 } );

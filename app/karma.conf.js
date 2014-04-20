@@ -10,12 +10,16 @@ module.exports = function(config) {
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['mocha', 'requirejs', "chai", "sinon-chai", "chai-jquery" ],
+    frameworks: ['mocha', 'requirejs', "chai", "sinon"],
 
 
     // list of files / patterns to load in the browser
     files: [
       'test-main.js',
+      {pattern: 'libs/jquery/dist/jquery.js', included: false},
+      {pattern: 'libs/lodash/dist/lodash.underscore.js', included: false},
+      {pattern: 'libs/backbone/backbone.js', included: false},
+      {pattern: 'libs/marionette/lib/backbone.marionette.js', included: false},
       {pattern: 'js/**/*.js', included: false},
       {pattern: 'test/**/*.js', included: false}
     ],
