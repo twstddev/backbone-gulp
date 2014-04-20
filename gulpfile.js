@@ -23,7 +23,12 @@ require( "gulp-load" )( gulp );
 gulp.loadTasks( __dirname );
 
 gulp.task( "development", [
+	"karma:watch",
 	"compass",
 	"livereload",
 	"open"
+] );
+
+gulp.task( "test", [
+	"karma:test"
 ] );
