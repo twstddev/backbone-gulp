@@ -1,11 +1,7 @@
-define( [ "js/src/application" ], function() {
+define( [ "js/src/application" ], function( Application ) {
 	describe( "Application", function() {
 		it( "should be an instance of Marionette Application", function() {
-			expect( [ 1, 2, 3 ] ).to.include( 2 );
-		} );
-
-		it( "should pass another test", function() {
-			expect( "here" ).to.be.a( "string" );
+			expect( Application ).to.be.an.instanceof( Backbone.Marionette.Application );
 		} );
 	} );
 } );
