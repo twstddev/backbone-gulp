@@ -10,4 +10,4 @@ This boilerplate contains
 * Gulp
 * SASS, Compass
 * Bower
-* Mocha, Chai, Sinon
+* Karma, Mocha, Chai, Sinon, PhantomJS, Istanbul
