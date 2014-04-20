@@ -26,6 +26,8 @@
     "chai": "~1.9.1",
     "karma-chai": "~0.1.0",
     "karma-sinon": "~1.0.3",
-    "sinon": "~1.9.1"
+    "sinon": "~1.9.1",
+    "phantomjs": "~1.9.7-3",
+    "karma-phantomjs-launcher": "~0.1.4"
   }
 }

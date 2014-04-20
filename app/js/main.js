@@ -5,7 +5,7 @@ var App = App || {};
 require( [ "../config/require-config" ], function() {
 	
 	// implicitly load main application dependencies
-	require( [ "jquery-migrate", "marionette" ], function() {
+	require( [ "jquery-migrate" ], function() {
 
 		// finally load application itself
 		require( [ "../config/app", "src/application" ], function( config, Application ) {
