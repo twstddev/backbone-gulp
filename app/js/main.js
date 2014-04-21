@@ -8,7 +8,7 @@ require( [ "../config/require-config" ], function() {
 	require( [ "jquery-migrate" ], function() {
 
 		// finally load application itself
-		require( [ "../config/app", "src/application", "src/core" ],
+		require( [ "config/app", "js/src/application", "js/src/core" ],
 			function( config, Application, Core ) {
 			App = Application;
 

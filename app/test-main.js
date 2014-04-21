@@ -21,7 +21,8 @@ require.config({
 		"jquery-migrate" : "libs/jquery-migrate/jquery-migrate",
 		"underscore" : "libs/lodash/dist/lodash.underscore",
 		"backbone" : "libs/backbone/backbone",
-		"marionette" : "libs/marionette/lib/backbone.marionette"
+		"marionette" : "libs/marionette/lib/backbone.marionette",
+		"handlebars" : "libs/handlebars/handlebars.runtime"
 	},
 
 	shim : {
@@ -42,6 +43,9 @@ require.config({
 		"marionette" : {
 			deps : [ "backbone" ],
 			exports : "Marionette"
+		},
+		"handlebars" : {
+			exports : "Handlebars"
 		}
 	},
 

@@ -1,11 +1,12 @@
 require.config( {
-	baseUrl : "js",
+	baseUrl : "",
 	paths : {
-		"jquery" : "../libs/jquery/dist/jquery",
-		"jquery-migrate" : "../libs/jquery-migrate/jquery-migrate",
-		"underscore" : "../libs/lodash/dist/lodash.underscore",
-		"backbone" : "../libs/backbone/backbone",
-		"marionette" : "../libs/marionette/lib/backbone.marionette"
+		"jquery" : "libs/jquery/dist/jquery",
+		"jquery-migrate" : "libs/jquery-migrate/jquery-migrate",
+		"underscore" : "libs/lodash/dist/lodash.underscore",
+		"backbone" : "libs/backbone/backbone",
+		"marionette" : "libs/marionette/lib/backbone.marionette",
+		"handlebars" : "libs/handlebars/handlebars.amd"
 	},
 
 	shim : {

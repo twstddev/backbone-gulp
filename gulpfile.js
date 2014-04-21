@@ -25,6 +25,7 @@ gulp.loadTasks( __dirname );
 gulp.task( "development", [
 	"karma:watch",
 	"compass",
+	"handlebars",
 	"livereload",
 	"open"
 ] );
