@@ -8,8 +8,18 @@ require( [ "../config/require-config" ], function() {
 	require( [ "jquery-migrate" ], function() {
 
 		// finally load application itself
-		require( [ "../config/app", "src/application" ], function( config, Application ) {
+		require( [ "../config/app", "src/application", "src/core" ],
+			function( config, Application, Core ) {
 			App = Application;
+
+			App.addInitializer( function( options ) {
+				options = _.extend( options, {
+					region_manager : App
+				} );
+
+				Core.init( config );
+			} );
+
 			App.start( config );
 		} );
 	} );

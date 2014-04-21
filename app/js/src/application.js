@@ -5,5 +5,7 @@
  * extend it here.
  */
 define( [ "marionette" ], function() {
-	return new Backbone.Marionette.Application();
+	var Application = new Backbone.Marionette.Application();
+
+	return Application;
 } );
