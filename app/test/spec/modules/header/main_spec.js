@@ -4,7 +4,7 @@ describe( "HeaderModule", function() {
 		append : function() {}
 	};
 
-	beforeEach( function( done ) {
+	before( function( done ) {
 		require( [ "js/modules/header/main" ], function( module ) {
 			HeaderModule = module;
 
@@ -23,7 +23,7 @@ describe( "HeaderModule", function() {
 		fragment_mock.verify();
 	} );
 
-	afterEach( function() {
+	after( function() {
 		HeaderModule = null;
 	} );
 } );
