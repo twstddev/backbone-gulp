@@ -1,5 +1,5 @@
-define( [ "js/modules/header/main" ],
-	function( HeaderModule ) {
+define( [ "js/modules/header/main", "js/modules/footer/main" ],
+	function( HeaderModule, FooterModule ) {
 	/**
 	 * @brief A singleton object that creates
 	 * main elements of the app.
@@ -22,6 +22,10 @@ define( [ "js/modules/header/main" ],
 
 			new HeaderModule( {
 				region : region_manager.header
+			} );
+
+			new FooterModule( {
+				region : region_manager.footer
 			} );
 		};
 

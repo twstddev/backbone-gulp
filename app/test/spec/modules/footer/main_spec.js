@@ -1,22 +1,22 @@
-describe( "HeaderModule", function() {
-	var HeaderModule = null;
+describe( "FooterModule", function() {
+	var FooterModule = null;
 	var region = {
 		show : function() {}
 	};
 
 	beforeEach( function( done ) {
-		require( [ "js/modules/header/main" ], function( module ) {
-			HeaderModule = module;
+		require( [ "js/modules/footer/main" ], function( module ) {
+			FooterModule = module;
 
 			done();
 		} );
 	} );
 
-	it( "adds header layout to the given region", function() {
+	it( "adds footer layout to the given region", function() {
 		var region_mock = sinon.mock( region );
 		region_mock.expects( "show" ).once();
 
-		var header = new HeaderModule( {
+		var footer = new FooterModule( {
 			region : region
 		} );
 
@@ -24,6 +24,6 @@ describe( "HeaderModule", function() {
 	} );
 
 	afterEach( function() {
-		HeaderModule = null;
+		FooterModule = null;
 	} );
 } );

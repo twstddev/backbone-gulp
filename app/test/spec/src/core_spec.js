@@ -13,6 +13,9 @@ describe( "Core", function() {
 			addRegions : function() {},
 			header : {
 				show : function() {}
+			},
+			footer : {
+				show : function() {}
 			}
 		};
 	} );
