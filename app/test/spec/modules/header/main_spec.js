@@ -1,7 +1,7 @@
 describe( "HeaderModule", function() {
 	var HeaderModule = null;
-	var region = {
-		show : function() {}
+	var fragment = {
+		append : function() {}
 	};
 
 	beforeEach( function( done ) {
@@ -12,15 +12,15 @@ describe( "HeaderModule", function() {
 		} );
 	} );
 
-	it( "adds header layout to the given region", function() {
-		var region_mock = sinon.mock( region );
-		region_mock.expects( "show" ).once();
+	it( "adds header layout to the given fragment", function() {
+		var fragment_mock = sinon.mock( fragment );
+		fragment_mock.expects( "append" ).once();
 
 		var header = new HeaderModule( {
-			region : region
+			fragment : fragment
 		} );
 
-		region_mock.verify();
+		fragment_mock.verify();
 	} );
 
 	afterEach( function() {

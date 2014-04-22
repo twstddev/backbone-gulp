@@ -9,24 +9,21 @@ define( [ "js/modules/header/main", "js/modules/footer/main" ],
 
 		/**
 		 * @brief Creates the main layout of the application.
-		 *
-		 * @param Object region_manager is the main manager of root regions
-		 * in the app
 		 */
-		var createMainLayout = function( region_manager ) {
-			region_manager.addRegions( {
-				header : "header.main",
-				main_content : "section.main",
-				footer : "footer.main"
-			} );
+		var createMainLayout = function() {
+			// Marionette forces to use non semantic layout, so we should
+			// use dirty hacks to get around it
+			var main_fragment = $( document.createDocumentFragment() );
 
 			new HeaderModule( {
-				region : region_manager.header
+				fragment : main_fragment
 			} );
 
 			new FooterModule( {
-				region : region_manager.footer
+				fragment : main_fragment
 			} );
+
+			$( "body" ).prepend( main_fragment );
 		};
 
 		return {
@@ -36,7 +33,7 @@ define( [ "js/modules/header/main", "js/modules/footer/main" ],
 			 * @param Object options is a list of configuration options
 			 */
 			init : function( options ) {
-				createMainLayout( options.region_manager );
+				createMainLayout();
 			}
 		}
 	} )();

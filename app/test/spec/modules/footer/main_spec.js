@@ -1,7 +1,7 @@
 describe( "FooterModule", function() {
 	var FooterModule = null;
-	var region = {
-		show : function() {}
+	var fragment = {
+		append : function() {}
 	};
 
 	beforeEach( function( done ) {
@@ -12,15 +12,15 @@ describe( "FooterModule", function() {
 		} );
 	} );
 
-	it( "adds footer layout to the given region", function() {
-		var region_mock = sinon.mock( region );
-		region_mock.expects( "show" ).once();
+	it( "adds footer layout to the given fragment", function() {
+		var fragment_mock = sinon.mock( fragment );
+		fragment_mock.expects( "append" ).once();
 
 		var footer = new FooterModule( {
-			region : region
+			fragment : fragment
 		} );
 
-		region_mock.verify();
+		fragment_mock.verify();
 	} );
 
 	afterEach( function() {

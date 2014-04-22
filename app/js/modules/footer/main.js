@@ -2,14 +2,15 @@ define( [ "js/modules/footer/views/footer_layout", "marionette" ],
 	function( FooterLayout ) {
 	// contains private data of the object
 	var PrivateScope = function() {
-		this.region = null;
+		this.fragment = null;
 	};
 
 	/**
 	 * @brief Sets layout as the current one and makes it visible.
 	 */
 	PrivateScope.prototype.addLayout = function( layout ) {
-		this.region.show( layout );
+		layout.render();
+		this.fragment.append( layout.$el );
 	};
 
 	/**
@@ -23,7 +24,7 @@ define( [ "js/modules/footer/views/footer_layout", "marionette" ],
 			// create cheshire cat
 			this.d = new PrivateScope();
 
-			this.d.region = options.region;
+			this.d.fragment = options.fragment;
 			this.d.addLayout( new FooterLayout );
 		}
 	} );

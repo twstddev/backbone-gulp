@@ -1,6 +1,6 @@
 describe( "Core", function() {
 	var Core = null;
-	var region_manager = null;
+	var fragment_manager = null;
 
 	beforeEach( function( done ) {
 		require( [ "js/src/core" ], function( application_core ) {
@@ -9,33 +9,18 @@ describe( "Core", function() {
 			done();
 		} );
 
-		region_manager = {
-			addRegions : function() {},
-			header : {
-				show : function() {}
-			},
-			footer : {
-				show : function() {}
-			}
-		};
+		fragment_manager = $( document.createDocumentFragment() );
 	} );
 
-	it( "should add main regions", function() {
-		var expected_regions = {
-			header : "header.main",
-			main_content : "section.main",
-			footer : "footer.main"
-		};
+	it( "creates main layout elements", function() {
+		Core.init();
 
-		var regions_manager_mock = sinon.mock( region_manager );
-		regions_manager_mock.expects( "addRegions" ).once().withArgs( expected_regions );
-
-		Core.init( { region_manager : region_manager } );
-
-		regions_manager_mock.verify();
+		expect( $( "body" ).find( "header.main" ).length ).to.be.eq( 1 );
+		expect( $( "body" ).find( "footer.main" ).length ).to.be.eq( 1 );
 	} );
 
 	afterEach( function() {
 		Core = null;
+		fragment_manager = null;
 	} );
 } );

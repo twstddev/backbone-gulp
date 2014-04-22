@@ -4,6 +4,8 @@ define( [ "js/templates/footer", "marionette" ],
 	 * @brief Represents HTML layout of the footer.
 	 */
 	var FooterLayout = Backbone.Marionette.Layout.extend( {
+		tagName : "footer",
+		className : "main",
 		template : footer_template
 	} );
 
