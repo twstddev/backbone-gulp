@@ -6,6 +6,7 @@ describe( "HeaderModule", function() {
 
 	beforeEach( function( done ) {
 		require( [ "js/modules/header/main" ], function( module ) {
+			console.log( "here" );
 			HeaderModule = module;
 
 			done();

@@ -10,7 +10,10 @@ describe( "Core", function() {
 		} );
 
 		region_manager = {
-			addRegions : function() {}
+			addRegions : function() {},
+			header : {
+				show : function() {}
+			}
 		};
 	} );
 

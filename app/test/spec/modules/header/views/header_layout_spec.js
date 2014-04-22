@@ -12,7 +12,6 @@ describe( "HeaderLayout", function() {
 	} );
 
 	it( "contains main title", function() {
-		console.log( header_layout.$el );
 		expect( header_layout.$el.find( "h1" ).length ).to.be.eq( 1 );
 	} );
 
