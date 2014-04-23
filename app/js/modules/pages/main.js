@@ -9,6 +9,7 @@ define( [
 	var PrivateScope = function() {
 		this.region = null;
 		this.pages = new Pages( fixtures.pages );
+		this.router = null;
 	};
 
 	/**
@@ -16,9 +17,7 @@ define( [
 	 * be visible on landing.
 	 */
 	PrivateScope.prototype.initializePage = function() {
-		this.region.show( new DefaultPageView( {
-			model : this.pages.findWhere( { slug : "home" } )
-		} ) );
+		//this.setCurrentPage( "/" );
 	};
 
 	/**
@@ -38,6 +37,20 @@ define( [
 	};
 
 	/**
+	 * @brief Creates page specific router.
+	 */
+	PrivateScope.prototype.createRouter = function() {
+		this.router = new Backbone.Marionette.AppRouter( {
+			controller : this.parent,
+
+			appRoutes : {
+				":slug" : "navigateToGivenSlug",
+				"" : "navigateToGivenSlug"
+			}
+		} );
+	};
+
+	/**
 	 * @brief Creates, displays and swaps application pages.
 	 */
 	var PageModule = Backbone.Marionette.Controller.extend( {
@@ -46,7 +59,9 @@ define( [
 			this.d = new PrivateScope();
 
 			this.d.region = options.region;
+			this.d.parent = this;
 			this.d.initializePage();
+			this.d.createRouter();
 
 			this.listenTo( App.vent, "pages:change", this.navigateToGivenSlug );
 		},

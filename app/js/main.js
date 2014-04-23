@@ -20,6 +20,12 @@ require( [ "../config/require-config" ], function() {
 				Core.init( config );
 			} );
 
+			App.on( "initialize:after", function() {
+				Backbone.history.start( {
+					pushState : true
+				} );
+			} );
+
 			App.start( config );
 		} );
 	} );

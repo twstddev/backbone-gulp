@@ -9,13 +9,12 @@ define( [ "js/templates/menu_item", "marionette" ],
 		template : layout,
 
 		events : {
-			"click" : "signalClick"
+			"click a" : "signalClick"
 		},
 
 		signalClick : function( event ) {
 			event.preventDefault();
 			this.trigger( "clicked", this.model.get( "slug" ) );
-			return false;
 		}
 	} );
 

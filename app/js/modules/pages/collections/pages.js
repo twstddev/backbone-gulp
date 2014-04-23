@@ -8,7 +8,9 @@ define( [ "js/modules/pages/models/page", "backbone" ],
 
 		findWhere : function( attributes ) {
 			if ( _.has( attributes, "slug" ) && 
-				( attributes.slug == "" || attributes.slug == "/" ) ) {
+				( !attributes.slug ||
+					attributes.slug == "" ||
+					attributes.slug == "/" ) ) {
 				attributes.slug = "home";
 			}
 			return Backbone.Collection.prototype.findWhere.call( this, attributes );

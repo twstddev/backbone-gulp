@@ -40,15 +40,6 @@ define( [
 			} );
 		};
 
-		/**
-		 * @brief Makes Backbone dependencies ready.
-		 */
-		var initializeBackbone = function() {
-			Backbone.history.start( {
-				pushState : true
-			} );
-		}
-
 		return {
 			/**
 			 * @brief Fake constructor.
@@ -56,7 +47,6 @@ define( [
 			 * @param Object options is a list of configuration options
 			 */
 			init : function( options ) {
-				initializeBackbone(); 
 				createMainLayout( options.region_manager );
 			}
 		}

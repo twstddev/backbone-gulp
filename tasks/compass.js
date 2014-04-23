@@ -1,7 +1,6 @@
 module.exports = function( gulp ) {
 	var process_sass = function() {
 		gulp.src( get_application_path( "sass/main.scss" ) )
-			.pipe( plugins.cached( "compass" ) )
 			.pipe( plugins.compass( {
 				css : get_application_path( "css" ),
 				sass : get_application_path( "sass" ),

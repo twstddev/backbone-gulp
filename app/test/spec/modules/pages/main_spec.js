@@ -22,6 +22,9 @@ describe( "PageModule", function() {
 			region : region
 		} );
 
+		Backbone.history.start();
+		Backbone.history.navigate( "/" );
+
 		expect( region.show.calledOnce ).to.be.true;
 	} );
 

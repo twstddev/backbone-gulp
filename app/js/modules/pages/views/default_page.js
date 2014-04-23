@@ -5,7 +5,16 @@ define( [ "js/templates/default_page", "marionette" ],
 	 */
 	var DefaultPageView = Backbone.Marionette.ItemView.extend( {
 		tagName : "article",
-		template : Template
+		template : Template,
+
+		initialize : function() {
+			this.$el.addClass( "hidden" );
+		},
+
+		onShow : function() {
+			this.$el.focus();
+			this.$el.removeClass( "hidden" );
+		}
 	} );
 
 	return DefaultPageView;

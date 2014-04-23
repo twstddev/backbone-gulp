@@ -18,6 +18,9 @@ module.exports = function( gulp ) {
 
 			server.use( require( "connect-livereload" )() );
 			server.use( express.static( config.server.base_dir ) );
+			server.get( "*", function( request, response ) {
+				response.sendfile( config.server.base_dir + "/index.html" );
+			} );
 			server.listen( config.server.port, config.server.host );
 		};
 
