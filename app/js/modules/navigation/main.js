@@ -52,7 +52,7 @@ define( [
 			this.d.region = options.region;
 			this.d.createLayout();
 
-			this.listenTo( App.vent, "navigate", this.navigateToGivenSlug );
+			this.listenTo( App.vent, "navigate:page", this.navigateToGivenSlug );
 		},
 
 		/**

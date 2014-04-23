@@ -12,7 +12,7 @@ define( [ "js/modules/navigation/views/menu_item", "marionette" ],
 		},
 
 		signalNavigationSlug : function( child, slug ) {
-			App.vent.trigger( "navigate", slug );
+			App.vent.trigger( "navigate:page", slug );
 		}
 	} );
 

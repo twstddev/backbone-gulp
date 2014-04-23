@@ -30,7 +30,9 @@ define( [ "js/modules/header/main", "js/modules/footer/main" ],
 		 * @brief Makes Backbone dependencies ready.
 		 */
 		var initializeBackbone = function() {
-			Backbone.history.start();
+			Backbone.history.start( {
+				pushState : true
+			} );
 		}
 
 		return {
