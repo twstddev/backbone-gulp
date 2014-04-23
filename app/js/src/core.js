@@ -26,6 +26,13 @@ define( [ "js/modules/header/main", "js/modules/footer/main" ],
 			$( "body" ).prepend( main_fragment );
 		};
 
+		/**
+		 * @brief Makes Backbone dependencies ready.
+		 */
+		var initializeBackbone = function() {
+			Backbone.history.start();
+		}
+
 		return {
 			/**
 			 * @brief Fake constructor.
@@ -33,6 +40,7 @@ define( [ "js/modules/header/main", "js/modules/footer/main" ],
 			 * @param Object options is a list of configuration options
 			 */
 			init : function( options ) {
+				initializeBackbone(); 
 				createMainLayout();
 			}
 		}

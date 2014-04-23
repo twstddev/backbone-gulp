@@ -1,3 +1,5 @@
+App = null;
+
 describe( "HeaderModule", function() {
 	var HeaderModule = null;
 	var fragment = {
@@ -6,6 +8,7 @@ describe( "HeaderModule", function() {
 
 	before( function( done ) {
 		require( [ "js/modules/header/main" ], function( module ) {
+			App = new Backbone.Marionette.Application();
 			HeaderModule = module;
 
 			done();

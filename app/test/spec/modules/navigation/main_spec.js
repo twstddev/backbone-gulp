@@ -1,3 +1,5 @@
+App = null;
+
 describe( "NavigationModule", function() {
 	var NavigationModule = null;
 	var region = {
@@ -7,6 +9,7 @@ describe( "NavigationModule", function() {
 	before( function( done ) {
 		require( [ "js/modules/navigation/main" ],
 			function( module ) {
+			App = new Backbone.Marionette.Application();
 			NavigationModule = module;
 
 			done();
