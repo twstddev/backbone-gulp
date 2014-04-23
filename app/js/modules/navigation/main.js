@@ -51,15 +51,6 @@ define( [
 
 			this.d.region = options.region;
 			this.d.createLayout();
-
-			this.listenTo( App.vent, "navigate:page", this.navigateToGivenSlug );
-		},
-
-		/**
-		 * @brief Fires history navigate with the given slug.
-		 */
-		navigateToGivenSlug : function( slug ) {
-			Backbone.history.navigate( slug );
 		}
 	} );
 

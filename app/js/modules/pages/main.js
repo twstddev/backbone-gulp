@@ -39,6 +39,16 @@ define( [
 
 			this.d.region = options.region;
 			this.d.initializePage();
+
+			this.listenTo( App.vent, "pages:change", this.navigateToGivenSlug );
+		},
+
+		/**
+		 * @brief Fires history navigate with the given slug.
+		 */
+		navigateToGivenSlug : function( slug ) {
+			console.log( slug );
+			Backbone.history.navigate( slug );
 		}
 	} );
 
