@@ -8,25 +8,33 @@ define( [
 	// private scope of the module
 	var PrivateScope = function() {
 		this.region = null;
+		this.pages = new Pages( fixtures.pages );
 	};
-
-	/**
-	 * @brief Prepares list of pages.
-	 */
-	PrivateScope.prototype.createPages = function() {
-		return new Pages( fixtures.pages );
-	}
 
 	/**
 	 * @brief Initializes pager with the first page that should
 	 * be visible on landing.
 	 */
 	PrivateScope.prototype.initializePage = function() {
-		var pages = this.createPages();
-
 		this.region.show( new DefaultPageView( {
-			model : pages.findWhere( { slug : "home" } )
+			model : this.pages.findWhere( { slug : "home" } )
 		} ) );
+	};
+
+	/**
+	 * @brief Changes current page to one that matches
+	 * provided slug.
+	 *
+	 * @param String slug is the requested slug
+	 */
+	PrivateScope.prototype.setCurrentPage = function( slug ) {
+		var new_current_page = this.pages.findWhere( { slug : slug } );
+
+		if ( new_current_page ) {
+			this.region.show( new DefaultPageView( {
+				model : new_current_page
+			} ) );
+		}
 	};
 
 	/**
@@ -47,8 +55,8 @@ define( [
 		 * @brief Fires history navigate with the given slug.
 		 */
 		navigateToGivenSlug : function( slug ) {
-			console.log( slug );
 			Backbone.history.navigate( slug );
+			this.d.setCurrentPage( slug );
 		}
 	} );
 
