@@ -1,5 +1,9 @@
-define( [ "js/modules/header/main", "js/modules/footer/main" ],
-	function( HeaderModule, FooterModule ) {
+define( [ 
+	"js/modules/header/main",
+	"js/modules/pages/main",
+	"js/modules/footer/main"
+	],
+	function( HeaderModule, PagesModule, FooterModule ) {
 	/**
 	 * @brief A singleton object that creates
 	 * main elements of the app.
@@ -10,7 +14,7 @@ define( [ "js/modules/header/main", "js/modules/footer/main" ],
 		/**
 		 * @brief Creates the main layout of the application.
 		 */
-		var createMainLayout = function() {
+		var createMainLayout = function( region_manager ) {
 			// Marionette forces to use non semantic layout, so we should
 			// use dirty hacks to get around it
 			var main_fragment = $( document.createDocumentFragment() );
@@ -19,11 +23,21 @@ define( [ "js/modules/header/main", "js/modules/footer/main" ],
 				fragment : main_fragment
 			} );
 
+			main_fragment.append( $( "<section>", { class : "main" } ) );
+
 			new FooterModule( {
 				fragment : main_fragment
 			} );
 
 			$( "body" ).prepend( main_fragment );
+
+			region_manager.addRegions( {
+				pages : "section.main"
+			} );
+
+			new PagesModule( {
+				region : region_manager.pages
+			} );
 		};
 
 		/**
@@ -43,7 +57,7 @@ define( [ "js/modules/header/main", "js/modules/footer/main" ],
 			 */
 			init : function( options ) {
 				initializeBackbone(); 
-				createMainLayout();
+				createMainLayout( options.region_manager );
 			}
 		}
 	} )();
