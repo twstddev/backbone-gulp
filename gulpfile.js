@@ -43,5 +43,7 @@ gulp.task( "default", [
 	"imagemin",
 	"usemin",
 	"htmlmin",
-	"cssmin"
+	"cssmin",
+	"scripts",
+	"modernizr"
 ] );
