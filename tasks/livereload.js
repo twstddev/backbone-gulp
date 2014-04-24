@@ -75,7 +75,12 @@ module.exports = function( gulp ) {
 			}
 		} );
 
-		gulp.watch( config.base + "/**/*.*", function( event ) {
+		var watch_files = [
+			config.base + "/**/*.*",
+			"!" + get_application_path( "sass/**/*.scss" )
+		];
+
+		gulp.watch( watch_files, function( event ) {
 			Server.updateLivereload( event );
 		} );
 	} );

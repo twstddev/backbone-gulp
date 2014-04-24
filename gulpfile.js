@@ -23,6 +23,7 @@ require( "gulp-load" )( gulp );
 gulp.loadTasks( __dirname );
 
 gulp.task( "development", [
+	"clean:build",
 	"karma:watch",
 	"compass",
 	"handlebars",
@@ -32,4 +33,11 @@ gulp.task( "development", [
 
 gulp.task( "test", [
 	"karma:test"
+] );
+
+gulp.task( "default", [
+	"clean:build",
+	"clean:dist",
+	"compass:build",
+	"handlebars:build"
 ] );

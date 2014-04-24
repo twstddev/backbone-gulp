@@ -34,6 +34,7 @@
     "gulp-cached": "0.0.3",
     "karma-coverage": "~0.2.1",
     "gulp-define-module": "~0.1.0",
-    "gulp-handlebars": "~2.0.0"
+    "gulp-handlebars": "~2.0.0",
+    "gulp-clean": "~0.2.4"
   }
 }

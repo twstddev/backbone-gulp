@@ -17,4 +17,6 @@ module.exports = function( gulp ) {
 
 		gulp.watch( template_files, compile_templates );
 	} );
+
+	gulp.task( "handlebars:build", compile_templates );
 }
