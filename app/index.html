@@ -24,12 +24,19 @@
 			Your amazing application
 		</title>
 
+		<!-- build:js js/header.js -->
 		<script type="text/javascript" src="libs/modernizr/modernizr.js"></script>
+		<!-- endbuild -->
+
 		<!--[if (gte IE 6)&(lte IE 8)]>
+			<!-- build:js js/conditional.js -->
 			<script type="text/javascript" src="libs/selectivizr/selectivizr.js"></script>
+			<!-- endbuild -->
 		<![endif]-->
 	</head>
 	<body>
+		<!-- build:js js/main.js -->
 		<script type="text/javascript" src="libs/requirejs/require.js" data-main="js/main.js"></script>
+		<!-- endbuild -->
 	</body>
 </html>

@@ -39,5 +39,8 @@ gulp.task( "default", [
 	"clean:build",
 	"clean:dist",
 	"compass:build",
-	"handlebars:build"
+	"handlebars:build",
+	"imagemin",
+	"usemin",
+	"htmlmin"
 ] );
