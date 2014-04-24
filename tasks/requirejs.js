@@ -14,7 +14,9 @@ module.exports = function( gulp ) {
 				   "jquery-migrate" : "libs/jquery-migrate/jquery-migrate",
 				   "underscore" : "libs/lodash/dist/lodash.underscore",
 				   "backbone" : "libs/backbone/backbone",
-				   "marionette" : "libs/marionette/lib/backbone.marionette",
+				   "marionette" : "libs/marionette/lib/core/amd/backbone.marionette",
+					'backbone.wreqr' : 'libs/backbone.wreqr/lib/amd/backbone.wreqr',
+					'backbone.babysitter' : 'libs/backbone.babysitter/lib/amd/backbone.babysitter',
 				   "handlebars" : "libs/handlebars/handlebars.runtime"
 			   },
 
@@ -32,10 +34,6 @@ module.exports = function( gulp ) {
 				   "backbone" : {
 					   deps : [ "underscore", "jquery" ],
 					   exports : "Backbone"
-				   },
-				   "marionette" : {
-					   deps : [ "backbone" ],
-					   exports : "Marionette"
 				   },
 				   "handlebars" : {
 					   exports : "Handlebars"
