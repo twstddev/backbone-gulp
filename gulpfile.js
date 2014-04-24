@@ -23,14 +23,17 @@ GLOBAL.output_error = function( error ) {
 require( "gulp-load" )( gulp );
 gulp.loadTasks( __dirname );
 
-gulp.task( "development", [
-	"clean:build",
-	"karma:watch",
-	"compass",
-	"handlebars",
-	"livereload",
-	"open"
-] );
+gulp.task( "development", function( done ) {
+	run_sequence(
+		"clean:build",
+		"compass",
+		"handlebars",
+		"karma:watch",
+		"livereload",
+		"open",
+		done
+	);
+} );
 
 gulp.task( "test", [
 	"karma:test"
@@ -52,17 +55,3 @@ gulp.task( "default", function( done ) {
 		done
 	);
 } );
-
-//gulp.task( "default", [
-	//"clean:build",
-	//"clean:dist",
-	//"compass:build",
-	//"handlebars:build",
-	//"imagemin",
-	//"usemin",
-	//"htmlmin",
-	//"cssmin",
-	//"scripts",
-	//"modernizr",
-	//"requirejs"
-//] );

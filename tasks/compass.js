@@ -12,9 +12,8 @@ module.exports = function( gulp ) {
 	}
 
 	gulp.task( "compass", function() {
-		process_sass();
-
 		gulp.watch( get_application_path( "sass/**/**.scss" ), process_sass );
+		return process_sass();
 	} );
 
 	gulp.task( "compass:build", process_sass );
