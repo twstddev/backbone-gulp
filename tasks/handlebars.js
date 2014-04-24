@@ -2,7 +2,7 @@ module.exports = function( gulp ) {
 	var template_files = get_application_path( "templates/**/**.hbs" );
 
 	var compile_templates = function() {
-		gulp.src( template_files )
+		return gulp.src( template_files )
 			.pipe( plugins.cached( "handlebars" ) )
 			.pipe( plugins.handlebars() )
 			.pipe( plugins.defineModule( "amd" ) )

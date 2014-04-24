@@ -1,5 +1,6 @@
 var gulp = require( "gulp" );
 var path_helper = require( "path" );
+var run_sequence = require( "run-sequence" );
 
 GLOBAL.plugins = require( "gulp-load-plugins" )();
 
@@ -35,15 +36,33 @@ gulp.task( "test", [
 	"karma:test"
 ] );
 
-gulp.task( "default", [
-	"clean:build",
-	"clean:dist",
-	"compass:build",
-	"handlebars:build",
-	"imagemin",
-	"usemin",
-	"htmlmin",
-	"cssmin",
-	"scripts",
-	"modernizr"
-] );
+gulp.task( "default", function( done ) {
+	run_sequence(
+		"clean:build",
+		"clean:dist",
+		"compass:build",
+		"handlebars:build",
+		"imagemin",
+		"usemin",
+		"htmlmin",
+		"cssmin",
+		"scripts",
+		//"modernizr",
+		"requirejs",
+		done
+	);
+} );
+
+//gulp.task( "default", [
+	//"clean:build",
+	//"clean:dist",
+	//"compass:build",
+	//"handlebars:build",
+	//"imagemin",
+	//"usemin",
+	//"htmlmin",
+	//"cssmin",
+	//"scripts",
+	//"modernizr",
+	//"requirejs"
+//] );

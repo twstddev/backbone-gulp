@@ -4,7 +4,7 @@ module.exports = function( gulp ) {
 			get_application_path( "js/**/*.js" ),
 			get_application_path( "css/main.css" )
 		];
-		gulp.src( modernizr_files )
+		return gulp.src( modernizr_files )
 			.pipe( plugins.modernizr() )
 			.pipe( plugins.rename( "header.js" ) )
 			.pipe( plugins.uglify() )
