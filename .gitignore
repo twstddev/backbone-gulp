@@ -1,5 +1,6 @@
 node_modules/
 vendorlibs/
+dist/
 **/*.log
 dist/
 .sass-cache/

@@ -9,7 +9,7 @@ module.exports = function( gulp ) {
 	} );
 
 	gulp.task( "clean:dist", function() {
-		gulp.src( get_application_path( "dist" ), { read : false } )
+		gulp.src( config.dist, { read : false } )
 			.pipe( plugins.clean( { force : true } ) );
 	} );
 };
