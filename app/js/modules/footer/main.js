@@ -16,7 +16,7 @@ define( [ "js/modules/footer/views/footer_layout", "marionette" ],
 	/**
 	 * @brief Represents main footer of the application.
 	 */
-	var FooterModule = Marionette.Controller.extend( {
+	var FooterModule = Backbone.Marionette.Controller.extend( {
 		/**
 		 * @brief Constructor.
 		 */

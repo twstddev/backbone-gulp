@@ -32,7 +32,7 @@ define( [
 	 * @brief Represents main header of the application.
 	 * Manages layout and initializing of the navigation module.
 	 */
-	var HeaderModule = Marionette.Controller.extend( {
+	var HeaderModule = Backbone.Marionette.Controller.extend( {
 		/**
 		 * @brief Constructor.
 		 */

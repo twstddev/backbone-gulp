@@ -62,18 +62,20 @@ module.exports = function( gulp ) {
 		}
 	} )();
 
+	var server_config = {
+		server : {
+			host : config.hostname,
+			port : config.port,
+			base_dir : config.base + "/"
+		},
+		livereload : {
+			host : config.hostname,
+			port : 35729
+		}
+	};
+
 	gulp.task( "livereload", function() {
-		Server.init( {
-			server : {
-				host : config.hostname,
-				port : config.port,
-				base_dir : config.base + "/"
-			},
-			livereload : {
-				host : config.hostname,
-				port : 35729
-			}
-		} );
+		Server.init( server_config );
 
 		var watch_files = [
 			config.base + "/**/*.*",
@@ -83,5 +85,10 @@ module.exports = function( gulp ) {
 		gulp.watch( watch_files, function( event ) {
 			Server.updateLivereload( event );
 		} );
+	} );
+
+	gulp.task( "server:dist", function() {
+		server_config.server.base_dir = config.dist + "/";
+		Server.init( server_config );
 	} );
 }

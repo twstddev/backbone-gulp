@@ -44,7 +44,7 @@ define( [
 	/**
 	 * @brief Adds main navigation to the application.
 	 */
-	var NavigationModule = Marionette.Controller.extend( {
+	var NavigationModule = Backbone.Marionette.Controller.extend( {
 		initialize : function( options ) {
 			// create cheshire cat
 			this.d = new PrivateScope();

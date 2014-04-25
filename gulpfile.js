@@ -50,8 +50,8 @@ gulp.task( "default", function( done ) {
 		"htmlmin",
 		"cssmin",
 		"scripts",
-		//"modernizr",
 		"requirejs",
+		//"modernizr",
 		done
 	);
 } );

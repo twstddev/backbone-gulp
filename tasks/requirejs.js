@@ -45,7 +45,7 @@ module.exports = function( gulp ) {
 				}
 			}
 		} )
-		//.pipe( plugins.uglify() )
+		.pipe( plugins.uglify() )
 		.pipe( gulp.dest( config.dist + "/js" ) );
 	} );
 }
