@@ -1,4 +1,4 @@
-define( [ "js/modules/navigation/views/menu_item", "marionette" ],
+define( [ "./menu_item", "marionette" ],
 	function( SingleView ) {
 	/**
 	 * @brief Represents a view that contains a list of menu items.

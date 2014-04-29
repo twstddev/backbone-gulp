@@ -27,8 +27,8 @@ describe( "MenuItemsView", function() {
 
 	beforeEach( function( done ) {
 		require( [
-			"js/modules/navigation/views/menu_items",
-			"js/modules/navigation/collections/menu_items"
+			"js/include/navigation/views/menu_items",
+			"js/include/navigation/collections/menu_items"
 			], function( View, Collection ) {
 			var menu_items = new Collection( fixtures );
 

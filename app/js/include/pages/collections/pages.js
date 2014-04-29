@@ -1,4 +1,4 @@
-define( [ "js/modules/pages/models/page", "backbone" ],
+define( [ "../models/page", "backbone" ],
 	function( Page ) {
 	/**
 	 * @brief Represents a loaded list of pages.

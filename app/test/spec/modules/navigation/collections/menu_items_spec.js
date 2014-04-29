@@ -15,7 +15,7 @@ describe( "MenuItems", function() {
 	];
 
 	beforeEach( function( done ) {
-		require( [ "js/modules/navigation/collections/menu_items" ],
+		require( [ "js/include/navigation/collections/menu_items" ],
 			function( MenuItems ) {
 			menu_items = new MenuItems( fixtures );
 

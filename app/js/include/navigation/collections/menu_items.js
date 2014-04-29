@@ -1,4 +1,4 @@
-define( [ "js/modules/navigation/models/menu_item", "backbone" ],
+define( [ "../models/menu_item", "backbone" ],
 	function( MenuItem ) {
 	/**
 	 * @brief Represents a list of menu items.

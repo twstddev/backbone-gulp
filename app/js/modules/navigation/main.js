@@ -1,6 +1,6 @@
 define( [
-	"js/modules/navigation/collections/menu_items",
-	"js/modules/navigation/views/menu_items",
+	"js/include/navigation/collections/menu_items",
+	"js/include/navigation/views/menu_items",
 	"config/fixtures",
 	"marionette"
 	],

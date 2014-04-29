@@ -1,5 +1,5 @@
 define( [
-	"js/modules/header/views/header_layout",
+	"js/include/header/views/header_layout",
 	"js/modules/navigation/main",
 	"marionette"
 	],

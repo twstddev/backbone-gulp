@@ -1,6 +1,6 @@
 define( [ 
-	"js/modules/pages/views/default_page",
-	"js/modules/pages/collections/pages",
+	"js/include/pages/views/default_page",
+	"js/include/pages/collections/pages",
 	"config/fixtures",
 	"marionette"
 	],

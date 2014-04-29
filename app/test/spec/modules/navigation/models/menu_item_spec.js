@@ -7,7 +7,7 @@ describe( "MenuItem", function() {
 	};
 
 	before( function( done ) {
-		require( [ "js/modules/navigation/models/menu_item" ],
+		require( [ "js/include/navigation/models/menu_item" ],
 			function( model ) {
 			MenuItem = model;
 			done();

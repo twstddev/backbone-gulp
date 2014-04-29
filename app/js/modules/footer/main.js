@@ -1,4 +1,4 @@
-define( [ "js/modules/footer/views/footer_layout", "marionette" ],
+define( [ "js/include/footer/views/footer_layout", "marionette" ],
 	function( FooterLayout ) {
 	// contains private data of the object
 	var PrivateScope = function() {

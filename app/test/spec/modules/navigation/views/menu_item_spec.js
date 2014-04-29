@@ -4,8 +4,8 @@ describe( "MenuItemView", function() {
 
 	before( function( done ) {
 		require( [
-			"js/modules/navigation/views/menu_item",
-			"js/modules/navigation/models/menu_item"
+			"js/include/navigation/views/menu_item",
+			"js/include/navigation/models/menu_item"
 			],
 			function( view, model ) {
 			MenuItemView = view;

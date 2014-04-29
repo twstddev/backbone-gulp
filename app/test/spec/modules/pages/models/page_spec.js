@@ -4,7 +4,7 @@ describe( "Page", function() {
 
 	beforeEach( function( done ) {
 		require( [ 
-			"js/modules/pages/models/page" ,
+			"js/include/pages/models/page" ,
 			"config/fixtures"
 			],
 			function( Page, Fixtures ) {

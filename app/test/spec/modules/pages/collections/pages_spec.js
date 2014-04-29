@@ -3,7 +3,7 @@ describe( "Pages", function() {
 
 	beforeEach( function( done ) {
 		require( [ 
-			"js/modules/pages/collections/pages",
+			"js/include/pages/collections/pages",
 			"config/fixtures"
 			],
 			function( Pages, Fixtures ) {

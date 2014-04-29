@@ -2,7 +2,7 @@ describe( "HeaderLayout", function() {
 	var header_layout = null;
 
 	beforeEach( function( done ) {
-		require( [ "js/modules/header/views/header_layout" ],
+		require( [ "js/include/header/views/header_layout" ],
 			function( HeaderLayout ) {
 			header_layout = new HeaderLayout();
 			header_layout.render();

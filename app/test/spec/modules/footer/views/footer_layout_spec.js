@@ -2,7 +2,7 @@ describe( "FooterLayout", function() {
 	var footer_layout = null;
 
 	beforeEach( function( done ) {
-		require( [ "js/modules/footer/views/footer_layout" ],
+		require( [ "js/include/footer/views/footer_layout" ],
 			function( FooterLayout ) {
 			footer_layout = new FooterLayout();
 			footer_layout.render();
